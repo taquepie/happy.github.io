@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Журнал на 18 лет | Илья</title>
+    <script src="1.js"></script>
+    <link rel="stylesheet" href="love.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фон страницы -->
+    <div class="page-background"></div>
+    
+    <!-- Декоративные элементы фона -->
+    <div class="bg-decor herb-1">🌿</div>
+    <div class="bg-decor herb-2">🌿</div>
+    <div class="culinary-decor knife">🔪</div>
+    <div class="culinary-decor chef-hat">🌟</div>
+    <div class="culinary-decor spoon">🥄</div>
+    <div class="sparkle sparkle-1"></div>
+    <div class="sparkle sparkle-2"></div>
+    <div class="sparkle sparkle-3"></div>
+    <div class="sparkle sparkle-4"></div>
+    
+    <!-- Прогресс чтения -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="progressBar"></div>
+    </div>
+    
+    <!-- Индикатор размера (для отладки) -->
+    <div class="screen-size-indicator" id="screenSize"></div>
+    
+    
+    
+    <div class="container">
+        <!-- Заголовок журнала -->
+        <header class="main-header">
+            <h1>Статья к 18-летию Илюшки</h1>
+            <p style="color: #666; margin-top: 10px; font-size: clamp(0.9rem, 2.5vw, 1.2rem); max-width: 800px; margin-left: auto; margin-right: auto;">Специальное издание</p>
+        </header>
+        
+        <!-- Сетка разворотов журнала -->
+        <div class="magazine-grid">
+            
+            <!-- Первый разворот: Обложка и предисловие -->
+            <div class="spread" id="spread1">
+                <!-- Левая страница: Обложка -->
+                <div class="page dark-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 1</div>
+                        <h2 class="decorative-title" style="color: #a5d6a7;">ILYA</h2>
+                    </div>
+                    <img src="img/I.jpg" alt="Портрет Ильи" class="portrait" >
+                    <div style="text-align: center; margin-top: 20px;">
+                        <h3 style="font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: 3px; color: #81c784;">18 ЛЕТ</h3>
+                        <p style="color: #a5d6a7; margin-top: 10px; font-size: clamp(0.8rem, 2vw, 1rem);">Март 2026 </p>
+                    </div>
+                </div>
+                
+                <!-- Правая страница: Предисловие -->
+                <div class="page cream-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 2</div>
+                        <h2 class="decorative-title">От автора</h2>
+                    </div>
+                    <div style="margin-top: 15px; overflow: hidden;">
+                        <p class="drop-cap">Дорогой читатель, этот журнал создан с уважением и восхищением для особенного дня рождения Ильи. 18 лет — это возраст, когда ты становишься взрослым, а для Ильи это ещё и время расцвета его кулинарного таланта.</p>
+                        <p style="margin-top: 10px;">На этих страницах собраны воспоминания, пожелания и самые яркие моменты из его жизни.</p>
+                        <p style="margin-top: 10px;">Листайте страницы, вдыхайте ароматы и присоединяйтесь к нашему празднику!</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn" id="recipeBtn">С днем рождения ❤️</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Второй разворот: Оглавление и портрет -->
+            <div class="spread" id="spread2">
+                <!-- Левая страница: Оглавление -->
+                <div class="page green-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 3</div>
+                        <h2 class="decorative-title">Содержание</h2>
+            </div>
+                    <ul class="item-list" style="margin-top: 20px;">
+                        <li>Обложка</li>
+                        <li>Предисловие автора</li>
+                        <li>Содержание</li>
+                        <li>Именинник</li>
+                        <li>Детские годы</li>
+                        <li>Повар с золотыми руками</li>
+                        <li>Моменты</li>
+                        <li>18 лет Илюшке</li>
+                        <li>Именинник, он какой?</li>
+                        <li>Смешные моменты</li>
+                        <li>Чек-лист совершеннолетия</li>
+                        <li>Финал</li>
+                    </ul>
+                </div>
+                
+                <!-- Правая страница: Портрет -->
+                <div class="page white-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 4</div>
+                        <h2 class="section-title">🎂</h2>
+                    </div>
+                    <div class="chef-frame" style="margin-top: 15px; flex-grow: 1;">
+                        <img src="img/31.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; font-style: italic; color: #4caf50; font-size: clamp(0.8rem, 2vw, 1rem);">"Когда миру нужна помощь, он призывает героев. Детям нравятся герои. Но когда у тебя есть мясо, ты должен его съесть! У пиратов есть... вино, мясо и песни! Если тебе что-то нужно — просто возьми это! И будь готов отдать за это свою жизнь!"</p>
+                </div>
+            </div>
+            
+            <!-- Третий разворот: Что на кухне и коллаж -->
+            <div class="spread" id="spread3">
+                <!-- Левая страница: Что на кухне -->
+                <div class="page light-green-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 5</div>
+                        <h2 class="decorative-title">Childhood years</h2>                       
+                    </div>
+                    <div class="photo-grid photo-grid-2col">
+                        <img src="img/l.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/3.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/6.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/7.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                    <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #e8f5e9; border-radius: 10px;">
+                        <p style="font-weight: bold; color: #2d3b2a; font-size: clamp(0.9rem, 2vw, 1rem);">Каждый день — новый рецепт, каждый год — новый уровень мастерства</p>
+                    </div>
+                    
+                </div>
+                
+                <!-- Правая страница: Коллаж -->
+                <div class="page white-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 6</div>
+                        <h2 class="decorative-title">Grow Like a Povoreshka</h2>
+                    </div>
+                    <div class="photo-grid photo-grid-2col">
+                        <img src="img/photo_2025-03-18_18-41-54.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_2025-01-07_18-08-18.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_2025-08-18_14-49-48.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_2026-01-13_19-02-06.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-title">Любимый ингредиент:</div>
+                        <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: #388e3c; font-weight: bold;">Тимьян</p>
+                        <p style="margin-top: 5px; font-size: clamp(0.85rem, 2vw, 1rem);">"Он придает блюдам запах и характер. Ничто не сравнится с ароматом свежего Тимьяна!"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Четвертый разворот: Фотоколлаж и поздравление -->
+            <div class="spread" id="spread4">
+                <!-- Левая страница: Фотоколлаж -->
+                <div class="page cream-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 7</div>
+                        <h1 class="decorative-title">Moments</h1>
+                    </div>
+                     <div class="photo-grid photo-grid-2col">
+                        <img src="img/photo_2026-02-09_10-47-39.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/03.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_1_2026-03-14_21-16-42.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_4_2026-03-14_21-16-43.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_5_2026-03-14_21-16-43.jpg" alt="Портрет Ильи" class="portrait" >
+                        <img src="img/photo_2024-11-21_20-19-07.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                    <p style="text-align: center; margin-top: 15px; color: #4caf50; font-size: clamp(0.9rem, 2vw, 1rem);">Если вы не будете рисковать, вы не сможете создать будущее</p>
+                </div>
+                
+                <!-- Правая страница: Поздравительная страница -->
+                <div class="page dark-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 8</div>
+                        <h1 class="decorative-title" style="color: #a5d6a7;">Bon Anniversaire</h1>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="big-number">18</div>
+                        <p style="margin-top: 20px; font-size: clamp(1rem, 2.5vw, 1.2rem); color: #c8e6c9;">Автор бармалей</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <img src="img/photo_2026-03-14_20-50-51.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Шестой разворот: Эпитеты и мемы -->
+            <div class="spread" id="spread6">
+                <!-- Левая страница: Эпитеты -->
+                <div class="page light-green-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 11</div>
+                        <h2 class="decorative-title">Я тут поспрашивала, вот что про тебя говорят</h2>
+                    </div>
+                    <div class="word-cloud">
+                        <div class="word word-1">Талантливый</div>
+                        <div class="word word-2">Целеустремлённый</div>
+                        <div class="word word-3">Внимательный</div>
+                        <div class="word word-4">Креативный</div>
+                        <div class="word word-1">Ответственный</div>
+                        <div class="word word-2">Терпеливый</div>
+                        <div class="word word-3">Инициативный</div>
+                        <div class="word word-4">Вдохновляющий</div>
+                    </div>
+                </div>
+                
+                <!-- Правая страница: Мемы -->
+                <div class="page white-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 12</div>
+                        <h2 class="section-title">Memes</h2>
+</div>
+                    <div class="photo-grid" style="margin-top: 15px;">
+                       <img src="img/photo_2024-12-09_13-49-12.jpg" alt="Портрет Ильи" class="portrait" >
+                       <img src="img/photo_2025-12-09_11-29-25.jpg" alt="Портрет Ильи" class="portrait" >
+                       <img src="img/jhdttbvy_by_stickrubot_AgAD7TkAAiHDQUs.jpg" alt="Портрет Ильи" class="portrait" >
+                       <img src="img/photo_2024-11-29_00-51-23.jpg" alt="Портрет Ильи" class="portrait" >
+                    </div>
+                    <div style="text-align: center; margin-top: 15px; padding: 15px; background-color: #e8f5e9; border-radius: 10px;">
+                        <h3 style="color: #388e3c; font-size: clamp(1rem, 2.5vw, 1.2rem);">As one great man said
+                        <p style="color: #2d3b2a; font-style: italic; font-size: clamp(0.9rem, 2vw, 1rem); margin-top: 5px;">"Вскипяти воду, закинь пельмени - дальше я сам"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Седьмой разворот: Чек-лист и финал -->
+            <div class="spread" id="spread7">
+                <!-- Левая страница: Чек-лист -->
+                <div class="page cream-bg">
+                    <div class="page-header">
+                        <div class="number">Страница 13</div>
+                        <h2 class="decorative-title">Чек-лист 18 лет</h2>
+                    </div>
+                    <ul class="checklist" id="birthdayChecklist" style="margin-top: 20px; flex-grow: 1;">
+                        <li>Получить паспорт</li>
+                        <li>Испытать новые кулинарные техники</li>
+                        <li>Приготовить торт для своего дня рождения</li>
+                        <li>Разработать собственный рецепт</li>
+                        <li>Устроить ужин для семьи</li>
+                        <li>Завести кулинарный блог</li>
+                        <li>Пройти стажировку в ресторане</li>
+                        <li>Насладиться моментом взросления</li>
+                    </ul>
+                    <div class="culinary-icons">
+                        <div class="culinary-icon">
+                            <i class="fas fa-utensils"></i>
+                            <div>Ножи</div>
+                        </div>
+                        <div class="culinary-icon">
+                            <i class="fas fa-mortar-pestle"></i>
+                            <div>Специи</div>
+                        </div>
+                        <div class="culinary-icon">
+                            <i class="fas fa-cheese"></i>
+                            <div>Ингредиенты</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Правая страница: Финал -->
+                <div class="page dark-bg">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px 0;">
+                        <div style="text-align: center;">
+                            <h2 class="decorative-title" style="color: #a5d6a7; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 15px;">Happy birthday</h2>
+                            <p style="color: #c8e6c9; margin-bottom: 15px; font-size: clamp(0.9rem, 2vw, 1rem); max-width: 400px;">Счастливого совершеннолетия!</p>
+                            <div style="margin-top: 20px; color: #81c784; font-size: clamp(1.2rem, 3vw, 1.5rem);">
+                                <i class="fas fa-chef-hat"></i> С любовью от Оксанки <i class="fas fa-chef-hat"></i>
+                            </div>
+                            <p style="color: #a5d6a7; margin-top: 20px; font-style: italic; font-size: clamp(0.8rem, 2vw, 1rem);">"Если что то съехало, то это у тебя телефон кривой, а не сайт"</p>
+                        </div>
+                    </div>
+                </div>
+
+</div>
+            
+        </div>
+        
+        <!-- Подвал -->
+        <footer style="text-align: center; padding: clamp(20px, 4vw, 30px) 0; color: #666; border-top: 1px solid #e8f5e9; margin-top: 30px;">
+            <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Персонализированный журнал на 18-летие Ильи | Март: 2026 </p>
+            <p style="margin-top: 10px; font-size: clamp(0.8rem, 1.8vw, 0.9rem);">Стиль: пастельно-зелёный, современный</p>
+            <div style="margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                <span style="color: #81c784; font-size: clamp(0.8rem, 1.8vw, 0.9rem);">#Илья18лет</span>
+                <span style="color: #81c784; font-size: clamp(0.8rem, 1.8vw, 0.9rem);">#Любимый</span>
+                <span style="color: #81c784; font-size: clamp(0.8rem, 1.8vw, 0.9rem);">#Тимьянтоп</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+    
+   
